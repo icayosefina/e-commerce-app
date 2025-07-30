@@ -5,7 +5,8 @@ app.use(express.json()); // Middleware untuk parsing JSON body
 
 
 // Rute untuk setiap modul
-
+const userRoutes = require('./routes/userRoutes');
+app.use('/api/users', userRoutes);
 
 // Rute dasar
 app.get('/', (req, res) => {
