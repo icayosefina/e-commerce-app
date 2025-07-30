@@ -1,6 +1,8 @@
 require('dotenv').config();
 const express = require('express');
 const app = express();
+const productRoutes = require('./routes/transactionRoutes');
+app.use('/api/transactions', productRoutes);
 app.use(express.json()); // Middleware untuk parsing JSON body
 
 
