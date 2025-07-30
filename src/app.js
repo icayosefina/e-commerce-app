@@ -6,10 +6,10 @@ const customerRoutes = require('./routes/customerRoutes');
 const productRoutes = require('./routes/productRoutes');
 const transactionRoutes = require('./routes/transactionRoutes');
 
-
 app.use(express.json()); // Middleware untuk parsing JSON body
 
 // Rute untuk produk
+app.use('/api/users', userRoutes);
 app.use('/api/products', productRoutes);
 app.use('/api/transactions', productRoutes);
 
